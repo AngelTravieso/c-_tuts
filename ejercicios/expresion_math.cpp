@@ -3,15 +3,28 @@
 
 int main() {
 
-    float x, y, res;
+    float x, y, res, yCuadradaMenosUno;
 
     std::cout << "Humano digita lo solicitado: \n";
     std::cout << "Valor de x: "; std::cin >> x;
-    std::cout << "Valor de y: "; std::cin >> y;
 
-    // sqrt: raiz cuadrada
-    // pow: potencia
-    res = (sqrt(x)) / ( pow(y, 2) - 1 );
+    // goto (no recomendable), es preferible usar un ciclo while
+
+    // label del goto
+    ingresaYdeNuevo:
+        std::cout << "Valor de y: "; std::cin >> y;
+
+        // sqrt: raiz cuadrada
+        // pow: potencia
+        yCuadradaMenosUno = ( pow(y, 2) - 1 );
+        res = (sqrt(x)) / yCuadradaMenosUno;
+
+        // goto para devolver a un inicio en particular
+
+    if(yCuadradaMenosUno == 0) {
+        std::cout << "El valor de y no es valido, ingresa de nuevo el valor de y \n";
+        goto ingresaYdeNuevo;
+    }
 
     // obtener solo 3 decimales
     std::cout.precision(3);
