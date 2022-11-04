@@ -8,7 +8,7 @@ int main() {
     //* float
     float flotante = 9.99;
 
-    //* double (almance mas decimales que el float)
+    //* double (almacena mas decimales que el float)
     double doble = 9.9898;
 
     //* char
