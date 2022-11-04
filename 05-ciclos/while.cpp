@@ -5,8 +5,7 @@ using namespace std;
 int main() {
 
     // inicializar
-    int i;
-    i = 1;
+    int i = 1;
 
     // condicion
     while(i <= 10) {
